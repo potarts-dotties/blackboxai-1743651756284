@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugly Art Contest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #F5E7D1;
+        }
+        .trophy-animation {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="text-center max-w-2xl">
+        <h1 class="text-5xl font-bold mb-6 text-[#FF6B6B]">Ugly Art Contest</h1>
+        <p class="text-xl mb-8 text-gray-700">Where bad art gets the recognition it deserves!</p>
+        
+        <div class="trophy-animation mb-10">
+            <img src="https://images.pexels.com/photos/355321/pexels-photo-355321.jpeg" 
+                 alt="Trophy" 
+                 class="w-40 h-40 mx-auto rounded-full border-4 border-[#45B7D1]">
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="submit.html" 
+               class="px-6 py-3 bg-gradient-to-r from-[#FF6B6B] to-[#45B7D1] text-white font-bold rounded-full hover:opacity-90 transition">
+               <i class="fas fa-paint-brush mr-2"></i>Submit Your Masterpiece
+            </a>
+            <a href="vote.html" 
+               class="px-6 py-3 bg-gradient-to-r from-[#4ECDC4] to-[#45B7D1] text-white font-bold rounded-full hover:opacity-90 transition">
+               <i class="fas fa-thumbs-up mr-2"></i>Vote for the Worst
+            </a>
+        </div>
+
+        <p class="mt-10 text-gray-500 italic">"The Uglier, The Better!"</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
