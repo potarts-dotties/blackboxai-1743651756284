@@ -1,0 +1,76 @@
+/* Custom styles to complement Tailwind */
+body {
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effects */
+.btn-gradient {
+    background-size: 200% auto;
+    transition: 0.5s;
+    background-image: linear-gradient(to right, #FF6B6B 0%, #45B7D1 51%, #FF6B6B 100%);
+}
+
+.btn-gradient:hover {
+    background-position: right center;
+}
+
+/* Art entry animations */
+.art-entry {
+    transform: perspective(1000px) rotateX(0deg);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.art-entry:hover {
+    transform: perspective(1000px) rotateX(10deg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Form input focus effects */
+.input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(69, 183, 209, 0.3);
+}
+
+/* Trophy page special effects */
+.trophy-glow {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px -5px gold;
+    }
+    to {
+        box-shadow: 0 0 20px 5px gold;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trophy-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5E7D1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF6B6B;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E05555;
+}
